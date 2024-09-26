@@ -3,8 +3,11 @@
 
 # pc1_performance = int(input("Enter performace metric of pc1: "))
 # pc2_performance = int(input("Enter performace metric of pc2: "))
+pc1_name = "Intel Core i9-14900F"
+pc2_name = "Intel Core i9-13900KF"
 
-pc1_price = 524
+
+pc1_price = 524 
 pc2_price = 570
 
 pc1_performance = 36660         # using cpu prices and cinebench multi scores as
