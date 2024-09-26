@@ -1,7 +1,7 @@
 Features Added to PC Price-to-Performance Comparison Tool
 
-1. Price-to-Performance Calculation:- 
+1. Price-to-Performance Calculation: Calculates the price-to-performance ratio for two PCs.
 
-Calculates the price-to-performance ratio for two PCs.
+2. Percentage comparison: Added functionality to compare the price-to-performance ratios and output the difference in percentage.
 
-2.
+3. Input validation: Implemented input validation to ensure that user inputs are positive integers.
