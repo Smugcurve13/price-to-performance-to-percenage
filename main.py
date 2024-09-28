@@ -1,47 +1,39 @@
-# def is_valid_input(value):
-#     # check if the value is an positive integer
-#     return isinstance(value, int) and value > 0
+from functions import get_valid_input
 
+while True:
+    try:
+        number_of_pcs = get_valid_input("how many pcs: ")
 
-# def get_valid_input(prompt):
-#     while True:
-#         try:
-#             price = int(input(prompt))
-#             if is_valid_input(price):
-#                 return price
-#             else:
-#                 print("Please enter a valid positive integer")
-#         except ValueError:
-#             print("Invalid inout , please enter a number.")
+        if number_of_pcs<2:
+            print("Enter a Number equal or more than 2")
+        else:
+            break
 
+    except ValueError:
+        print("enter a valid integer")
 
+name_list = []
+price_list = []
+performance_list = []
 
-# pc1_price = get_valid_input("enter the price of pc1: ")
-# pc2_price = get_valid_input("enter the price of pc2: ")
+for i in range(number_of_pcs):
+    name = input("Enter name: ")
+    name_list.append(name)
+    price = int(get_valid_input("enter price: "))
+    price_list.append(price)
+    performance = int(get_valid_input("enter performance: "))
+    performance_list.append(performance)
 
-# pc1_performance = get_valid_input("Enter performace metric of pc1: ")
-# pc2_performance = get_valid_input("Enter performace metric of pc2: ")
-
-pc1_name = "Intel Core i9-14900F"
-pc2_name = "Intel Core i9-13900KF"
-
-
-pc1_price = 524 
-pc2_price = 570
-
-pc1_performance = 36660         # using cpu prices and cinebench multi scores as
-pc2_performance = 39012         # placeholder values
-
-
-prices = [pc1_price,pc2_price]
-performances = [pc1_performance,pc2_performance]
+print(name_list,price_list,performance_list)
 
 price_to_performance_list = []
 
-for price,performance in zip(prices,performances):
+for price,performance in zip(price_list,performance_list):
     price_to_performance = price / performance
     price_to_performance_list.append(price_to_performance)
-    
+
+print(price_to_performance_list)
+
 pc1_ptp , pc2_ptp = price_to_performance_list
 
 if pc1_ptp > pc2_ptp:
