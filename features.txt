@@ -1,0 +1,39 @@
+Features Added to PC Price-to-Performance Comparison Tool
+
+1. Price-to-Performance Calculation: Calculates the price-to-performance ratio 
+for two PCs.
+
+2. Percentage comparison: Added functionality to compare the price-to-performance ratios
+ and output the difference in percentage.
+
+3. Input validation: Implemented input validation to ensure 
+that user inputs are positive integers.
+
+4. Use Case : I have to define use case for different parts of pc components,
+ for ex, gaming, photoshop, premier pro, coding LLM building crypto
+
+5. Database Creation : data of performance metrics 
+(
+making a component based item list for ex flow would be 
+enter cpu name
+show performance metrics that can be added
+which performance metric to add 
+writing in csv /json whichever feels better
+can consider sql later but might hinder in a webapp capacity
+)
+
+6: Parts compatibility with each other: making sure that the parts we have 
+accumulated are in sync with each other and there is no discrepancy
+
+7: TDP and Temperature: checking how much power is drawn from the parts 
+and how much it heats up in optimal conditions
+
+8: Future Upgradability: correlates the cpu, gpu, ram with the mobo and gives 
+output based on what future generation of components can you pc support 
+
+9. Overclocking Support : checking if your given components such as cpu gpu ram monitor 
+supports overclocking, add a warning message that you are doing it at your own risk and
+may void your warranty so be cautious. 
+
+10. Display Support: How many monitors, their refresh rate and resolution do your 
+computer support
