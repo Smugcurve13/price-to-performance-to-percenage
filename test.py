@@ -1,16 +1,16 @@
 #checking number of pcs to know how many times the the loop should be
 
-while True:
-    try:
-        number_of_pcs = int(input("how many pcs: "))
+# while True:
+#     try:
+#         number_of_pcs = int(input("how many pcs: "))
 
-        if number_of_pcs<2:
-            print("Enter a Number equal or more than 2")
-        else:
-            break
+#         if number_of_pcs<2:
+#             print("Enter a Number equal or more than 2")
+#         else:
+#             break
 
-    except ValueError:
-        print("enter a valid integer")
+#     except ValueError:
+#         print("enter a valid integer")
 
 # pc1_price = get_valid_input("enter the price of pc1: ")
 # pc2_price = get_valid_input("enter the price of pc2: ")
@@ -32,17 +32,18 @@ while True:
 # prices = [pc1_price,pc2_price]
 # performances = [pc1_performance,pc2_performance]
 
-name_list = []
-price_list = []
-performance_list = []
+# name_list = []
+# price_list = []
+# performance_list = []
 
-for i in range(number_of_pcs):
-    name = input("Enter name: ")
-    name_list.append(name)
-    price = int(input("enter price: "))
-    price_list.append(price)
-    performance = int(input("enter performance: "))
-    performance_list.append(performance)
+# for i in range(number_of_pcs):
+#     name = input("Enter name: ")
+#     name_list.append(name)
+#     price = int(input("enter price: "))
+#     price_list.append(price)
+#     performance = int(input("enter performance: "))
+#     performance_list.append(performance)
 
-print(name_list,price_list,performance_list)
+# print(name_list,price_list,performance_list)
+
 
