@@ -6,9 +6,9 @@ def is_valid_input(value):
 def get_valid_input(prompt):
     while True:
         try:
-            price = int(input(prompt))
-            if is_valid_input(price):
-                return price
+            num = int(input(prompt))
+            if is_valid_input(num):
+                return num
             else:
                 print("Please enter a valid positive integer")
         except ValueError:

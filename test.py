@@ -46,20 +46,48 @@
 
 # print(name_list,price_list,performance_list)
 
-name = input("Enter your pc name: ")
-price = int(input("Enter your price: "))
-performance = int(input("Ener your performance: "))
+num_of_pcs = int(input("enter how many pcs you want to compare: "))
+names = []
+prices = []
+performances = []
 
-pcs_dict = {1:{'name' :name ,'price': price ,'performance' : performance}}
-print (pcs_dict)
+pcs_dict = {}
 
-pc_name = pcs_dict[1]['name']
-pc_price = pcs_dict[1]['price']
-pc_performance = pcs_dict[1]['performance']
+for i in range(1,num_of_pcs + 1):
+    name = input(f"Enter your pc {i} name: ")
+    price = int(input(f"Enter your price of pc {i} : "))
+    performance = int(input(f"Enter your performance of pc {i} : "))
+    
+    pcs_dict[i] = {'name' : name , 'price' : price , 'performance' : performance}  # iterating over a nested dictionary to get individual pcs metadata
 
-price_to_performance = pc_price/pc_performance
+ptp_list = []
 
-print(f"The {pc_name} with {pc_price}$ of price and the price to performance is {price_to_performance} ")
+# print (pcs_dict)
+for i in pcs_dict:
+    pc_name = pcs_dict[i]['name']
+    pc_price = pcs_dict[i]['price']
+    pc_performance = pcs_dict[i]['performance']
+
+    price_to_performance = pc_price/pc_performance
+    ptp_list.append(price_to_performance)
+
+    #print(f"The {pc_name} with {pc_price}$ of price and the price to performance is {price_to_performance} ")
+
+print(ptp_list)
+
+best_ptp = max(ptp_list)
+best_pc_index = ptp_list.index(best_ptp)
+best_pc_name = pcs_dict[best_pc_index + 1]['name']
+
+print(f"{best_pc_name} has the best price-to-performance ratio: {round(best_ptp,4)}")
+
+for ptp in range(len(ptp_list)):
+    if ptp != best_pc_index:
+        difference = best_ptp - ptp_list[ptp]
+        percentage_difference = (difference / ptp_list[ptp]) * 100 if ptp_list[ptp] != 0 else 0
+        shortened_number = round(percentage_difference,2)
+        
+        print (f"{best_pc_name}'s price-to-performance ratio is {shortened_number}% higher than {pcs_dict[ptp + 1]['name']}.")
 
 # Final Output
 # PC3 has the best price-to-performance ratio: 0.0160

@@ -13,6 +13,14 @@ that user inputs are positive integers.
  for ex, gaming, photoshop, premier pro, coding LLM building crypto
 
 5. Database Creation : data of performance metrics 
+(
+making a component based item list for ex flow would be 
+enter cpu name
+show performance metrics that can be added
+which performance metric to add 
+writing in csv /json whichever feels better
+can consider sql later but might hinder in a webapp capacity
+)
 
 6: Parts compatibility with each other: making sure that the parts we have 
 accumulated are in sync with each other and there is no discrepancy

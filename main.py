@@ -2,9 +2,9 @@ from functions import get_valid_input
 
 while True:
     try:
-        number_of_pcs = get_valid_input("how many pcs: ")
+        num_of_pcs = get_valid_input("enter how many pcs you want to compare: ")
 
-        if number_of_pcs<2:
+        if num_of_pcs<2:
             print("Enter a Number equal or more than 2")
         else:
             break
@@ -12,40 +12,44 @@ while True:
     except ValueError:
         print("enter a valid integer")
 
-name_list = []
-price_list = []
-performance_list = []
+names = []
+prices = []
+performances = []
 
-for i in range(number_of_pcs):
-    name = input("Enter name: ")
-    name_list.append(name)
-    price = int(get_valid_input("enter price: "))
-    price_list.append(price)
-    performance = int(get_valid_input("enter performance: "))
-    performance_list.append(performance)
+pcs_dict = {}
 
-print(name_list,price_list,performance_list)
+for i in range(1,num_of_pcs + 1):
+    name = input(f"Enter your pc {i} name: ")
+    price = get_valid_input(f"Enter your price of pc {i} : ")
+    performance = get_valid_input(f"Enter your performance of pc {i} : ")
+    
+    pcs_dict[i] = {'name' : name , 'price' : price , 'performance' : performance}  # iterating over a nested dictionary to get individual pcs metadata
 
-price_to_performance_list = []
+ptp_list = []
 
-for price,performance in zip(price_list,performance_list):
-    price_to_performance = price / performance
-    price_to_performance_list.append(price_to_performance)
+for i in pcs_dict:
+    pc_name = pcs_dict[i]['name']
+    pc_price = pcs_dict[i]['price']
+    pc_performance = pcs_dict[i]['performance']
 
-print(price_to_performance_list)
+    price_to_performance = pc_price/pc_performance
+    ptp_list.append(price_to_performance)
 
-pc1_ptp , pc2_ptp = price_to_performance_list
+best_ptp = max(ptp_list)
+best_pc_index = ptp_list.index(best_ptp)
+best_pc_name = pcs_dict[best_pc_index + 1]['name']
 
-if pc1_ptp > pc2_ptp:
-    difference = pc1_ptp - pc2_ptp
-    percentage_difference = (difference / pc2_ptp) * 100
-    shortened_number = round(percentage_difference,2)
-    print(f"PC1's price-to-performance ratio is {shortened_number} times higher per dollar")
-else:
-    difference = pc2_ptp - pc1_ptp
-    percentage_difference = (difference / pc1_ptp) * 100
-    shortened_number = round(percentage_difference,2)
-    print(f"PC2's price-to-performance ratio is {shortened_number} times higher per dollar")
+print(f"{best_pc_name} has the best price-to-performance ratio: {round(best_ptp,4)}")
 
+for ptp in range(len(ptp_list)):
+    if ptp != best_pc_index:
+        difference = best_ptp - ptp_list[ptp]
+        percentage_difference = (difference / ptp_list[ptp]) * 100 if ptp_list[ptp] != 0 else 0
+        shortened_number = round(percentage_difference,2)
+        
+        print (f"{best_pc_name}'s price-to-performance ratio is {shortened_number}% higher than {pcs_dict[ptp + 1]['name']}.")
 
-
+# Final Output
+# PC3 has the best price-to-performance ratio: 0.0160
+# PC1's price-to-performance ratio is 31.25% lower than PC3.
+# PC2's price-to-performance ratio is 12.50% lower than PC3.
