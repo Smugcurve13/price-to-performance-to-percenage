@@ -1,7 +1,6 @@
 # from functions import get_valid_input
 
 
-# # def p2p():
 # while True:
 #     try:
 #         number_of_pcs = get_valid_input("how many pcs: ")
