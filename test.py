@@ -46,4 +46,22 @@
 
 # print(name_list,price_list,performance_list)
 
+name = input("Enter your pc name: ")
+price = int(input("Enter your price: "))
+performance = int(input("Ener your performance: "))
 
+pcs_dict = {1:{'name' :name ,'price': price ,'performance' : performance}}
+print (pcs_dict)
+
+pc_name = pcs_dict[1]['name']
+pc_price = pcs_dict[1]['price']
+pc_performance = pcs_dict[1]['performance']
+
+price_to_performance = pc_price/pc_performance
+
+print(f"The {pc_name} with {pc_price}$ of price and the price to performance is {price_to_performance} ")
+
+# Final Output
+# PC3 has the best price-to-performance ratio: 0.0160
+# PC1's price-to-performance ratio is 31.25% lower than PC3.
+# PC2's price-to-performance ratio is 12.50% lower than PC3.
