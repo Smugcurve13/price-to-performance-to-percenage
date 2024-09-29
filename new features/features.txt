@@ -1,13 +1,14 @@
 Features Added to PC Price-to-Performance Comparison Tool
 
-1. Price-to-Performance Calculation: Calculates the price-to-performance ratio 
-for two PCs.
+1. P̶r̶i̶c̶e̶-̶t̶o̶-̶P̶e̶r̶f̶o̶r̶m̶a̶n̶c̶e̶ ̶C̶a̶l̶c̶u̶l̶a̶t̶i̶o̶n̶:̶ ̶C̶a̶l̶c̶u̶l̶a̶t̶e̶s̶ ̶t̶h̶e̶ ̶p̶r̶i̶c̶e̶-̶t̶o̶-̶p̶e̶r̶f̶o̶r̶m̶a̶n̶c̶e̶ ̶r̶a̶t̶i̶o̶
+̶f̶o̶r̶ ̶t̶w̶o̶ ̶P̶C̶s̶.̶
 
-2. Percentage comparison: Added functionality to compare the price-to-performance ratios
- and output the difference in percentage.
+2. P̶e̶r̶c̶e̶n̶t̶a̶g̶e̶ ̶c̶o̶m̶p̶a̶r̶i̶s̶o̶n̶:̶ ̶A̶d̶d̶e̶d̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶a̶l̶i̶t̶y̶ ̶t̶o̶ ̶c̶o̶m̶p̶a̶r̶e̶ ̶t̶h̶e̶ ̶p̶r̶i̶c̶e̶-̶t̶o̶-̶p̶e̶r̶f̶o̶r̶m̶a̶n̶c̶e̶ ̶r̶a̶t̶i̶o̶s̶
+̶ ̶a̶n̶d̶ ̶o̶u̶t̶p̶u̶t̶ ̶t̶h̶e̶ ̶d̶i̶f̶f̶e̶r̶e̶n̶c̶e̶ ̶i̶n̶ ̶p̶e̶r̶c̶e̶n̶t̶a̶g̶e̶.G̶i̶v̶e̶s̶ ̶o̶u̶t̶ ̶a̶ ̶s̶u̶m̶m̶a̶r̶y̶ ̶o̶f̶ ̶t̶h̶e̶ ̶s̶a̶i̶d̶ ̶d̶i̶f̶f̶ ̶b̶e̶t̶w̶e̶e̶n̶ ̶t̶h̶e̶ ̶
+h̶i̶g̶h̶e̶s̶t̶ ̶a̶n̶d̶ ̶r̶e̶s̶t̶ ̶o̶f̶ ̶p̶c̶s̶
 
-3. Input validation: Implemented input validation to ensure 
-that user inputs are positive integers.
+3. I̶n̶p̶u̶t̶ ̶v̶a̶l̶i̶d̶a̶t̶i̶o̶n̶:̶ ̶I̶m̶p̶l̶e̶m̶e̶n̶t̶e̶d̶ ̶i̶n̶p̶u̶t̶ ̶v̶a̶l̶i̶d̶a̶t̶i̶o̶n̶ ̶t̶o̶ ̶e̶n̶s̶u̶r̶e̶ 
+̶t̶h̶a̶t̶ ̶u̶s̶e̶r̶ ̶i̶n̶p̶u̶t̶s̶ ̶a̶r̶e̶ ̶p̶o̶s̶i̶t̶i̶v̶e̶ ̶i̶n̶t̶e̶g̶e̶r̶s̶.̶
 
 4. Use Case : I have to define use case for different parts of pc components,
  for ex, gaming, photoshop, premier pro, coding LLM building crypto
