@@ -1,4 +1,4 @@
-from functions import get_valid_input
+from app.functions import get_valid_input
 
 while True:
     try:
