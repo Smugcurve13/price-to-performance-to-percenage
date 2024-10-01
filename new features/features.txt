@@ -10,6 +10,9 @@ h̶i̶g̶h̶e̶s̶t̶ ̶a̶n̶d̶ ̶r̶e̶s̶t̶ ̶o̶f̶ ̶p̶c̶s̶
 3. I̶n̶p̶u̶t̶ ̶v̶a̶l̶i̶d̶a̶t̶i̶o̶n̶:̶ ̶I̶m̶p̶l̶e̶m̶e̶n̶t̶e̶d̶ ̶i̶n̶p̶u̶t̶ ̶v̶a̶l̶i̶d̶a̶t̶i̶o̶n̶ ̶t̶o̶ ̶e̶n̶s̶u̶r̶e̶ 
 ̶t̶h̶a̶t̶ ̶u̶s̶e̶r̶ ̶i̶n̶p̶u̶t̶s̶ ̶a̶r̶e̶ ̶p̶o̶s̶i̶t̶i̶v̶e̶ ̶i̶n̶t̶e̶g̶e̶r̶s̶.̶
 
+3.25 Make webapp using streamlit
+
+
 3.5. Delegate each specific continuos task to different functions
 (
 New options for start of program
