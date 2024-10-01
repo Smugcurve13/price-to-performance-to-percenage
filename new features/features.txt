@@ -20,7 +20,7 @@ price to peformance between which pcs
 Also add
 Do you want to add new pc from database or enter your own
 Somewhere in code
-
+)
 4. Use Case : I have to define use case for different parts of pc components,
  for ex, gaming, photoshop, premier pro, coding LLM building crypto
 
