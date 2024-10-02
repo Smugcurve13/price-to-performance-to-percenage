@@ -60,6 +60,9 @@ for i in range(1,num_of_pcs + 1):
     
     pcs_dict[i] = {'name' : name , 'price' : price , 'performance' : performance}  # iterating over a nested dictionary to get individual pcs metadata
 
+
+# def ptp_calculator(pcs_dict):
+
 ptp_list = []
 
 # print (pcs_dict)
@@ -73,7 +76,7 @@ for i in pcs_dict:
 
     #print(f"The {pc_name} with {pc_price}$ of price and the price to performance is {price_to_performance} ")
 
-print(ptp_list)
+# print(ptp_list)
 
 best_ptp = max(ptp_list)
 best_pc_index = ptp_list.index(best_ptp)
@@ -88,6 +91,9 @@ for ptp in range(len(ptp_list)):
         shortened_number = round(percentage_difference,2)
         
         print (f"{best_pc_name}'s price-to-performance ratio is {shortened_number}% higher than {pcs_dict[ptp + 1]['name']}.")
+
+# if __name__=="__main__":
+#     ptp_calculator(pcs_dict)
 
 # Final Output
 # PC3 has the best price-to-performance ratio: 0.0160
