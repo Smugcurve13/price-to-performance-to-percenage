@@ -28,8 +28,8 @@ try:
 except NameError:
     pass
 
-st.button(label="Convert")
-
+st.button(label="Calculate")
+st.button("Reset", type="primary")
 
 print(st.session_state)
 # display table of pcs after finish entering
