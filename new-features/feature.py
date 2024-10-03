@@ -7,7 +7,7 @@ def ptp_calculator(pcs_dics):
 
     st.info
     ptp_list = []
-
+ 
     # print (pcs_dic)
     for i in pcs_dic:
         pc_name = pcs_dic[i]['name']

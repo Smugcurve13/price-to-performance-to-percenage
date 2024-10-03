@@ -46,6 +46,17 @@
 
 # print(name_list,price_list,performance_list)
 
+'''
+Adding Feature to program which allows allows user to choose between user input and pre defined pcs
+'''
+
+import csv
+
+with open('data.csv','r') as file:
+    csv_reader = csv.DictReader(file)
+    data = [row for row in csv_reader]
+print(data)
+
 num_of_pcs = int(input("enter how many pcs you want to compare: "))
 names = []
 prices = []
