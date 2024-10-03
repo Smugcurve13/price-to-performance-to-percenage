@@ -2,16 +2,18 @@ import streamlit as st
 import pandas as pd
 
 
+
 def ptp_calculator(pcs_dics):
 
+    st.info
     ptp_list = []
-    pc_name
 
     # print (pcs_dic)
     for i in pcs_dic:
         pc_name = pcs_dic[i]['name']
         pc_price = pcs_dic[i]['price']
         pc_performance = pcs_dic[i]['performance']
+        
 
         price_to_performance = pc_price/pc_performance
         ptp_list.append(price_to_performance)
@@ -24,6 +26,7 @@ def ptp_calculator(pcs_dics):
     best_pc_index = ptp_list.index(best_ptp)
     best_pc_name = pcs_dic[best_pc_index + 1]['name']
 
+    print("test")
     return(f"{best_pc_name} has the best price-to-performance ratio: {round(best_ptp,4)}")
 
     for ptp in range(len(ptp_list)):
@@ -64,10 +67,10 @@ try:
 
     calculate = st.button('Calculate')
 
-    if bool(calculate)==True:
-        print(bool(st.button))
+    if calculate:
+        st.write("Hello , This is working")
         result = ptp_calculator(pcs_dic)
-        st.write(result)
+        st.write("The rsults is :-"+ result)
 except (NameError, ValueError,KeyError):
     pass
 
