@@ -3,9 +3,8 @@ import pandas as pd
 
 
 
-def ptp_calculator(pcs_dics):
+def ptp_calculator(pcs_dic):
 
-    st.info
     ptp_list = []
  
     # print (pcs_dic)
@@ -24,10 +23,15 @@ def ptp_calculator(pcs_dics):
 
     best_ptp = max(ptp_list)
     best_pc_index = ptp_list.index(best_ptp)
-    best_pc_name = pcs_dic[best_pc_index + 1]['name']
+    # best_pc_name = pcs_dic[best_pc_index + 1]['name']
+    if (best_pc_index + 1) in pcs_dic:
+        best_pc_name = pcs_dic[best_pc_index + 1]['name']
+    else:
+        st.info("PC index not found")
+
 
     print("test")
-    return(f"{best_pc_name} has the best price-to-performance ratio: {round(best_ptp,4)}")
+    best_result = (f"{best_pc_name} has the best price-to-performance ratio: {round(best_ptp,4)}")
 
     for ptp in range(len(ptp_list)):
         if ptp != best_pc_index:
@@ -35,7 +39,9 @@ def ptp_calculator(pcs_dics):
             percentage_difference = (difference / ptp_list[ptp]) * 100 if ptp_list[ptp] != 0 else 0
             shortened_number = round(percentage_difference,2)
             
-            return (f"{best_pc_name}'s price-to-performance ratio is {shortened_number}% higher than {pcs_dic[ptp + 1]['name']}.")
+            comparison_result = (f"{best_pc_name}'s price-to-performance ratio is {shortened_number}% higher than {pcs_dic[ptp + 1]['name']}.")
+    
+    return(best_result,comparison_result)
 
 if __name__ == '__main__':
     pass
@@ -50,18 +56,18 @@ try:
     price=[]
     performance=[]
 
-    pcs_dic = {}
+    pcs_dics = {}
 
     for num in range(1,num_of_pcs+1):
         name = st.text_input(label=f"enter name of PC {num}")
         price = int(st.text_input(label=f"enter price of PC {num}"))
         performance = int(st.text_input(label=f"enter performance of PC {num}"))
-
-        pcs_dic[f"PC {num}"] = {'name' : name , 'price' : price , 'performance' : performance}
+        pcs_dics[num] = {'name' : name , 'price' : price , 'performance' : performance}
+        # pcs_dics[f"PC {num}"] = {'name' : name , 'price' : price , 'performance' : performance}
 except ValueError:
     pass
 try:
-    df=pd.DataFrame(pcs_dic)
+    df=pd.DataFrame(pcs_dics)
     print(df)
     price_to_performance=st.write(df)
 
@@ -69,12 +75,10 @@ try:
 
     if calculate:
         st.write("Hello , This is working")
-        result = ptp_calculator(pcs_dic)
-        st.write("The rsults is :-"+ result)
-except (NameError, ValueError,KeyError):
+        result = ptp_calculator(pcs_dic=pcs_dics)
+        st.info(result)
+except (NameError):
     pass
-
-
 
 # st.button(label="Calculate",on_click=ptp_calculator(pcs_dic))
 
