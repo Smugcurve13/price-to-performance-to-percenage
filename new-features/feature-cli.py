@@ -18,14 +18,22 @@ match pc_choice:
                 filtered_data = filtered_data.reset_index(drop=True)
                 filtered_data.index = filtered_data.index + 1
                 print(filtered_data)
+                selected_index = int(input("\nEnter the number of the PC you want to select from the list: "))
+                selected_pc = filtered_data.iloc[selected_index-1]
+                print(selected_pc)
                 break
-        else:
+        elif pc_brand == '2':
             for name in (df['name']):
                 filtered_data = df[df['name'].str.startswith('AMD')]
                 filtered_data = filtered_data.reset_index(drop=True)
                 filtered_data.index = filtered_data.index + 1
-                print(filtered_data)            
+                print(filtered_data) 
+                selected_index = int(input("\nEnter the number of the PC you want to select from the list"))
+                selected_pc = filtered_data.iloc[selected_index-1]
+                print(selected_pc)           
                 break
-    
+        else:
+            print("Choose from above options")
+            
     case _:
         print("Enter Valid Option")
