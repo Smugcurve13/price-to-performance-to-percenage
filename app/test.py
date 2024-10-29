@@ -98,11 +98,11 @@ def ptp_calculator_test(pcs_dict):
 
     for ptp in range(len(ptp_list)):
         if ptp != best_pc_index:
-            difference = best_ptp - ptp_list[ptp]
+            difference = best_ptp - ptp_list[ptp-1]
             percentage_difference = (difference / ptp_list[ptp]) * 100 if ptp_list[ptp] != 0 else 0
             shortened_number = round(percentage_difference,2)
             
-            print (f"{best_pc_name}'s price-to-performance ratio is {shortened_number}% higher than {pcs_dict[ptp + 1]['name']}.")
+            print (f"{best_pc_name}'s price-to-performance ratio is {shortened_number}% higher than {pcs_dict[ptp]['name']}.")
 
 # if __name__=="__main__":
 #     ptp_calculator(pcs_dict)
