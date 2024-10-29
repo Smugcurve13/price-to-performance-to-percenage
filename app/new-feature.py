@@ -1,7 +1,7 @@
 import csv
 import pandas as pd
-from functions import ptp_calculator
-
+# from functions import ptp_calculator
+from test import ptp_calculator_test
 file = 'pcs.csv'
 df = pd.read_csv(file, usecols=['name','price','performance'])
 
@@ -45,4 +45,4 @@ for num in range(num_of_pcs):
             print("Enter Valid Option")
             continue
 
-ptp_calculator(user_choice)
+ptp_calculator_test(user_choice)
