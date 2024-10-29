@@ -91,11 +91,9 @@ def ptp_calculator_test(pcs_dict):
 
     best_ptp = max(ptp_list)
     best_pc_index = ptp_list.index(best_ptp)
-    if best_pc_index + 1 < len(pcs_dict):    
-        best_pc_name = pcs_dict[best_pc_index + 1]['name']
-    else:
-        best_pc_name = None
-        
+    best_pc_name = pcs_dict[best_pc_index]['name']
+   
+
     print(f"{best_pc_name} has the best price-to-performance ratio: {round(best_ptp,4)}")
 
     for ptp in range(len(ptp_list)):
