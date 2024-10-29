@@ -111,3 +111,17 @@ def ptp_calculator_test(pcs_dict):
 # PC3 has the best price-to-performance ratio: 0.0160
 # PC1's price-to-performance ratio is 31.25% lower than PC3.
 # PC2's price-to-performance ratio is 12.50% lower than PC3.
+
+# from functions import get_valid_input
+
+# while True:
+#     try:
+#         num_of_pcs = get_valid_input("enter how many pcs you want to compare: ")
+
+#         if num_of_pcs<2:
+#             print("Enter a Number equal or more than 2")
+#         else:
+#             break
+
+#     except ValueError:
+#         print("enter a valid integer")

@@ -1,7 +1,6 @@
 import csv
 import pandas as pd
-# from functions import ptp_calculator
-from test import ptp_calculator_test
+from functions import ptp_calculator_test,input_your_own_pc
 file = 'pcs.csv'
 df = pd.read_csv(file, usecols=['name','price','performance'])
 
@@ -41,6 +40,9 @@ for num in range(num_of_pcs):
             else:
                 print("Choose from above options")
                 continue
+        case '2':
+            input_your_own_pc(num_of_pcs)
+
         case _:
             print("Enter Valid Option")
             continue
