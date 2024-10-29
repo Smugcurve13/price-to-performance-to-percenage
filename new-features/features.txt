@@ -25,6 +25,8 @@ Do you want to add new pc from database or enter your own
 Somewhere in code
 )
 
+3.6 add a logs file that tracks each time program is run and clears each time run again so logs get stored for debugging.
+
 3.75. Make Database from webscraping nanoreview for cinebench scores and amazon.com prices
 
 4. Use Case : I have to define use case for different parts of pc components,
