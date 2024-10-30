@@ -41,7 +41,8 @@ for num in range(num_of_pcs):
                 print("Choose from above options")
                 continue
         case '2':
-            input_your_own_pc(num_of_pcs)
+            user_choice_pc = input_your_own_pc()
+            user_choice.append(user_choice_pc)
 
         case _:
             print("Enter Valid Option")
