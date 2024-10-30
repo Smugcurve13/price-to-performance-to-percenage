@@ -1,7 +1,7 @@
 import csv
 import pandas as pd
 from functions import ptp_calculator_test,input_your_own_pc
-file = 'pcs.csv'
+file = 'csv/pcs.csv'
 df = pd.read_csv(file, usecols=['name','price','performance'])
 
 user_choice = []
