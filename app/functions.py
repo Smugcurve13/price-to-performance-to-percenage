@@ -71,26 +71,46 @@ def ptp_calculator_test(pcs_dict):
     best_pc_index = ptp_list.index(best_ptp)
     best_pc_name = pcs_dict[best_pc_index]['name']
    
-
+    print(best_ptp, best_pc_index, best_pc_name)
     print(f"{best_pc_name} has the best price-to-performance ratio: {round(best_ptp,4)}")
 
     for ptp in range(len(ptp_list)):
         if ptp != best_pc_index:
-            difference = best_ptp - ptp_list[ptp-1]
+            difference = best_ptp - ptp_list[ptp]
             percentage_difference = (difference / ptp_list[ptp]) * 100 if ptp_list[ptp] != 0 else 0
-            shortened_number = round(percentage_difference,2)
+            shortened_number = round(percentage_difference,3)
+            # print("round",shortened_number)
             
             print (f"{best_pc_name}'s price-to-performance ratio is {shortened_number}% higher than {pcs_dict[ptp]['name']}.")
 
-def input_your_own_pc(num_of_pcs):
-    
-    pcs_dict = {}
+def input_your_own_pc():
 
-    for i in range(1,num_of_pcs + 1):
-        name = input(f"Enter your pc {i} name: ")
-        price = get_valid_input(f"Enter your price of pc {i} : ")
-        performance = get_valid_input(f"Enter your performance of pc {i} : ")
-        
-        pcs_dict[i] = {'name' : name , 'price' : price , 'performance' : performance}  # iterating over a nested dictionary to get individual pcs metadata
+    name = input(f"Enter your pc name: ")
+    price = get_valid_input(f"Enter your price of pc : ")
+    performance = get_valid_input(f"Enter your performance of pc : ")
     
+    pcs_dict = {'name' : name , 'price' : price , 'performance' : performance}  # iterating over a nested dictionary to get individual pcs metadata
+   
     print(pcs_dict)
+    return(pcs_dict)
+
+if __name__ == "__main__":
+    print("wrong file")
+    test_dict = [
+        {
+            'name':'amd123',
+            "price":100,
+            "performance":1500
+            },
+            {
+            'name':'intel456',
+            "price":200,
+            "performance":6969
+            },
+            {
+            'name':'nvidia',
+            "price":450,
+            "performance":15000
+            }
+    ]
+    print(ptp_calculator_test(test_dict))
