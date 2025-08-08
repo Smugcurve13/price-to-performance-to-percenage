@@ -1,4 +1,4 @@
-# PC Price-to-Performance Comparison Tool (Alpha Version)
+# PC Price-to-Performance Comparison Tool (Alpha Version) - TO BE UPDATED
 
 ## Overview
 This program calculates the price-to-performance ratio of two PCs, allowing users to make a data-driven comparison of which PC offers better value for money. It takes the price and performance metrics of two PCs and outputs how much one is more cost-effective than the other, making it easier to decide which machine is the best bang for your buck.

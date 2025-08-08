@@ -1,0 +1,59 @@
+Features Added to PC Price-to-Performance Comparison Tool
+
+1. P̶r̶i̶c̶e̶-̶t̶o̶-̶P̶e̶r̶f̶o̶r̶m̶a̶n̶c̶e̶ ̶C̶a̶l̶c̶u̶l̶a̶t̶i̶o̶n̶:̶ ̶C̶a̶l̶c̶u̶l̶a̶t̶e̶s̶ ̶t̶h̶e̶ ̶p̶r̶i̶c̶e̶-̶t̶o̶-̶p̶e̶r̶f̶o̶r̶m̶a̶n̶c̶e̶ ̶r̶a̶t̶i̶o̶
+̶f̶o̶r̶ ̶t̶w̶o̶ ̶P̶C̶s̶.̶
+
+2. P̶e̶r̶c̶e̶n̶t̶a̶g̶e̶ ̶c̶o̶m̶p̶a̶r̶i̶s̶o̶n̶:̶ ̶A̶d̶d̶e̶d̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶a̶l̶i̶t̶y̶ ̶t̶o̶ ̶c̶o̶m̶p̶a̶r̶e̶ ̶t̶h̶e̶ ̶p̶r̶i̶c̶e̶-̶t̶o̶-̶p̶e̶r̶f̶o̶r̶m̶a̶n̶c̶e̶ ̶r̶a̶t̶i̶o̶s̶
+̶ ̶a̶n̶d̶ ̶o̶u̶t̶p̶u̶t̶ ̶t̶h̶e̶ ̶d̶i̶f̶f̶e̶r̶e̶n̶c̶e̶ ̶i̶n̶ ̶p̶e̶r̶c̶e̶n̶t̶a̶g̶e̶.G̶i̶v̶e̶s̶ ̶o̶u̶t̶ ̶a̶ ̶s̶u̶m̶m̶a̶r̶y̶ ̶o̶f̶ ̶t̶h̶e̶ ̶s̶a̶i̶d̶ ̶d̶i̶f̶f̶ ̶b̶e̶t̶w̶e̶e̶n̶ ̶t̶h̶e̶ ̶
+h̶i̶g̶h̶e̶s̶t̶ ̶a̶n̶d̶ ̶r̶e̶s̶t̶ ̶o̶f̶ ̶p̶c̶s̶
+
+3. I̶n̶p̶u̶t̶ ̶v̶a̶l̶i̶d̶a̶t̶i̶o̶n̶:̶ ̶I̶m̶p̶l̶e̶m̶e̶n̶t̶e̶d̶ ̶i̶n̶p̶u̶t̶ ̶v̶a̶l̶i̶d̶a̶t̶i̶o̶n̶ ̶t̶o̶ ̶e̶n̶s̶u̶r̶e̶ 
+̶t̶h̶a̶t̶ ̶u̶s̶e̶r̶ ̶i̶n̶p̶u̶t̶s̶ ̶a̶r̶e̶ ̶p̶o̶s̶i̶t̶i̶v̶e̶ ̶i̶n̶t̶e̶g̶e̶r̶s̶.̶
+
+3.25 M̶a̶k̶e̶ ̶w̶e̶b̶a̶p̶p̶ ̶u̶s̶i̶n̶g̶ ̶s̶t̶r̶e̶a̶m̶l̶i̶t̶
+
+
+3.5. D̶e̶l̶e̶g̶a̶t̶e̶ ̶e̶a̶c̶h̶ ̶s̶p̶e̶c̶i̶f̶i̶c̶ ̶c̶o̶n̶t̶i̶n̶u̶o̶s̶ ̶t̶a̶s̶k̶ ̶t̶o̶ ̶d̶i̶f̶f̶e̶r̶e̶n̶t̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶s̶
+(
+N̶e̶w̶ ̶o̶p̶t̶i̶o̶n̶s̶ ̶f̶o̶r̶ ̶s̶t̶a̶r̶t̶ ̶o̶f̶ ̶p̶r̶o̶g̶r̶a̶m̶
+̶a̶d̶d̶ ̶p̶c̶s̶
+̶s̶h̶o̶w̶ ̶p̶c̶s̶
+̶e̶d̶i̶t̶ ̶p̶c̶s̶
+̶p̶r̶i̶c̶e̶ ̶t̶o̶ ̶p̶e̶f̶o̶r̶m̶a̶n̶c̶e̶ ̶b̶e̶t̶w̶e̶e̶n̶ ̶w̶h̶i̶c̶h̶ ̶p̶c̶s̶
+̶A̶l̶s̶o̶ ̶a̶d̶d̶
+̶D̶o̶ ̶y̶o̶u̶ ̶w̶a̶n̶t̶ ̶t̶o̶ ̶a̶d̶d̶ ̶n̶e̶w̶ ̶p̶c̶ ̶f̶r̶o̶m̶ ̶d̶a̶t̶a̶b̶a̶s̶e̶ ̶o̶r̶ ̶e̶n̶t̶e̶r̶ ̶y̶o̶u̶r̶ ̶o̶w̶n̶
+̶S̶o̶m̶e̶w̶h̶e̶r̶e̶ ̶i̶n̶ ̶c̶o̶d̶e̶
+)
+
+3.6 add a logs file that tracks each time program is run and clears each time run again so logs get stored for debugging.
+
+3.75. Make Database from webscraping nanoreview for cinebench scores and amazon.com prices
+
+4. Use Case : I have to define use case for different parts of pc components,
+ for ex, gaming, photoshop, premier pro, coding LLM building crypto
+
+5. Database Creation : data of performance metrics 
+(
+making a component based item list for ex flow would be 
+enter cpu name
+show performance metrics that can be added
+which performance metric to add 
+writing in csv /json whichever feels better
+can consider sql later but might hinder in a webapp capacity
+)
+
+6: Parts compatibility with each other: making sure that the parts we have 
+accumulated are in sync with each other and there is no discrepancy
+
+7: TDP and Temperature: checking how much power is drawn from the parts 
+and how much it heats up in optimal conditions
+
+8: Future Upgradability: correlates the cpu, gpu, ram with the mobo and gives 
+output based on what future generation of components can you pc support 
+
+9. Overclocking Support : checking if your given components such as cpu gpu ram monitor 
+supports overclocking, add a warning message that you are doing it at your own risk and
+may void your warranty so be cautious. 
+
+10. Display Support: How many monitors, their refresh rate and resolution do your 
+computer support

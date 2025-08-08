@@ -46,50 +46,82 @@
 
 # print(name_list,price_list,performance_list)
 
-num_of_pcs = int(input("enter how many pcs you want to compare: "))
-names = []
-prices = []
-performances = []
+'''
+Adding Feature to program which allows allows user to choose between user input and pre defined pcs
+'''
 
-pcs_dict = {}
+# import csv
 
-for i in range(1,num_of_pcs + 1):
-    name = input(f"Enter your pc {i} name: ")
-    price = int(input(f"Enter your price of pc {i} : "))
-    performance = int(input(f"Enter your performance of pc {i} : "))
+# with open('pcs.csv','r') as file:
+#     csv_reader = csv.DictReader(file)
+#     data = [row for row in csv_reader]
+# # print(data)
+
+# num_of_pcs = int(input("enter how many pcs you want to compare: "))
+# names = []
+# prices = []
+# performances = []
+
+# pcs_dict = {}
+
+# for i in range(1,num_of_pcs + 1):
+#     name = input(f"Enter your pc {i} name: ")
+#     price = int(input(f"Enter your price of pc {i} : "))
+#     performance = int(input(f"Enter your performance of pc {i} : "))
     
-    pcs_dict[i] = {'name' : name , 'price' : price , 'performance' : performance}  # iterating over a nested dictionary to get individual pcs metadata
+#     pcs_dict[i] = {'name' : name , 'price' : price , 'performance' : performance}  # iterating over a nested dictionary to get individual pcs metadata
 
-ptp_list = []
 
-# print (pcs_dict)
-for i in pcs_dict:
-    pc_name = pcs_dict[i]['name']
-    pc_price = pcs_dict[i]['price']
-    pc_performance = pcs_dict[i]['performance']
+def ptp_calculator_test(pcs_dict):
 
-    price_to_performance = pc_price/pc_performance
-    ptp_list.append(price_to_performance)
+    ptp_list = []
 
-    #print(f"The {pc_name} with {pc_price}$ of price and the price to performance is {price_to_performance} ")
+    # print (pcs_dict)
+    for i in range(len(pcs_dict)):
+        pc_name = pcs_dict[i]['name']
+        pc_price = pcs_dict[i]['price']
+        pc_performance = pcs_dict[i]['performance']
 
-print(ptp_list)
+        price_to_performance = pc_price/pc_performance
+        ptp_list.append(price_to_performance)
 
-best_ptp = max(ptp_list)
-best_pc_index = ptp_list.index(best_ptp)
-best_pc_name = pcs_dict[best_pc_index + 1]['name']
+        #print(f"The {pc_name} with {pc_price}$ of price and the price to performance is {price_to_performance} ")
 
-print(f"{best_pc_name} has the best price-to-performance ratio: {round(best_ptp,4)}")
+    # print(ptp_list)
 
-for ptp in range(len(ptp_list)):
-    if ptp != best_pc_index:
-        difference = best_ptp - ptp_list[ptp]
-        percentage_difference = (difference / ptp_list[ptp]) * 100 if ptp_list[ptp] != 0 else 0
-        shortened_number = round(percentage_difference,2)
-        
-        print (f"{best_pc_name}'s price-to-performance ratio is {shortened_number}% higher than {pcs_dict[ptp + 1]['name']}.")
+    best_ptp = max(ptp_list)
+    best_pc_index = ptp_list.index(best_ptp)
+    best_pc_name = pcs_dict[best_pc_index]['name']
+   
+
+    print(f"{best_pc_name} has the best price-to-performance ratio: {round(best_ptp,4)}")
+
+    for ptp in range(len(ptp_list)):
+        if ptp != best_pc_index:
+            difference = best_ptp - ptp_list[ptp-1]
+            percentage_difference = (difference / ptp_list[ptp]) * 100 if ptp_list[ptp] != 0 else 0
+            shortened_number = round(percentage_difference,2)
+            
+            print (f"{best_pc_name}'s price-to-performance ratio is {shortened_number}% higher than {pcs_dict[ptp]['name']}.")
+
+# if __name__=="__main__":
+#     ptp_calculator(pcs_dict)
 
 # Final Output
 # PC3 has the best price-to-performance ratio: 0.0160
 # PC1's price-to-performance ratio is 31.25% lower than PC3.
 # PC2's price-to-performance ratio is 12.50% lower than PC3.
+
+# from functions import get_valid_input
+
+# while True:
+#     try:
+#         num_of_pcs = get_valid_input("enter how many pcs you want to compare: ")
+
+#         if num_of_pcs<2:
+#             print("Enter a Number equal or more than 2")
+#         else:
+#             break
+
+#     except ValueError:
+#         print("enter a valid integer")
